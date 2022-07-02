@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Header from "./components/Header";
+import QuizSection from "./components/QuizSection";
+import { BrowserRouter, Route } from "react-router-dom";
+import HomePage from "./components/HomePage";
+import ResultPage from "./components/ResultPage";
 
 function App() {
+  // create route with 3 pages
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <BrowserRouter>
+        <Route path="/" component={HomePage} exact />
+        <Route path="/quiz" component={QuizSection} exact />
+        <Route path="/result" component={ResultPage} exact />
+      </BrowserRouter>
     </div>
   );
 }

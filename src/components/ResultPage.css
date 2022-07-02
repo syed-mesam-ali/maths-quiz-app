@@ -1,0 +1,6 @@
+.tableRowCorrect {
+  background-color: rgb(148, 225, 148);
+}
+.tableRowIncorrect {
+  background-color: rgb(248, 118, 118);
+}
